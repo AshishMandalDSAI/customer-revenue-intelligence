@@ -1,0 +1,93 @@
+# NovaMart CRIP -- Docker Compose
+#
+# Services:
+#   postgres  - PostgreSQL 16, auto-initialized with database/schema.sql and
+#               database/views.sql on first startup. database/seed.sql is
+#               NOT auto-run here: it uses `\copy ... FROM 'data/processed/...'`
+#               with paths relative to wherever psql is invoked, which the
+#               postgres container's docker-entrypoint-initdb.d step cannot
+#               resolve (it doesn't have data/processed mounted). Load it
+#               manually after running the pipeline -- see docs/installation.md
+#               and docs/database_design.md for the exact command.
+#   api       - FastAPI REST API (api/main.py), reads data/processed/*.csv
+#               and models/*.pkl produced by the pipeline
+#   app       - Streamlit dashboard (dashboard/app.py)
+#   pipeline  - one-shot service that runs the full analytics/ML pipeline
+#               and exits; run this first (or `docker compose run pipeline`)
+#               so api/app have data to serve
+#
+# NOTE (sandbox limitation, documented honestly): this file has NOT been run
+# with `docker compose up` in this development sandbox -- no Docker daemon
+# is available here. It has been written to accurately reflect the project's
+# real services, ports, and dependencies. Verify with `docker compose up
+# --build` on a machine with Docker installed.
+#
+# Usage:
+#   docker compose run --rm pipeline    # generate data + train models (once)
+#   docker compose up --build           # start postgres, api, and dashboard
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: novamart_postgres
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-novamart}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-novamart}
+      POSTGRES_DB: ${POSTGRES_DB:-novamart}
+    ports:
+      - "5432:5432"
+    volumes:
+      - novamart_pgdata:/var/lib/postgresql/data
+      - ./database/schema.sql:/docker-entrypoint-initdb.d/1_schema.sql:ro
+      - ./database/views.sql:/docker-entrypoint-initdb.d/2_views.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-novamart}"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  pipeline:
+    build: .
+    container_name: novamart_pipeline
+    command: ["python", "scripts/run_pipeline.py"]
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+      - ./powerbi/powerbi_data:/app/powerbi/powerbi_data
+
+  api:
+    build: .
+    container_name: novamart_api
+    command: ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  app:
+    build: .
+    container_name: novamart_dashboard
+    command: ["streamlit", "run", "dashboard/app.py", "--server.address=0.0.0.0", "--server.port=8501"]
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./models:/app/models
+      - ./reports:/app/reports
+    depends_on:
+      - api
+
+volumes:
+  novamart_pgdata:

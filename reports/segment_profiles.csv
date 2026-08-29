@@ -1,0 +1,5 @@
+cluster_id,recency_days,frequency,monetary,avg_order_value,tenure_days,engagement_score,return_rate,avg_discount_pct,churned,customer_count,total_revenue,churn_rate,segment_name,recommended_action
+0,176.286,0.405,2668.12,1600.294,199.375,12.106,0.0,0.038,0.462,576,1536837.39,0.462,Low-Engagement / Dormant,Low-cost automated reactivation email series
+1,66.015,12.779,219408.215,17501.814,531.926,41.728,0.085,0.253,0.355,4884,1071589722.05,0.355,Mid-Value Occasional Shoppers,Standard engagement nurture campaigns
+2,560.167,5.52,95649.367,16122.272,946.259,22.282,0.095,0.245,0.902,1114,106553394.77,0.902,Low-Engagement / Dormant,Low-cost automated reactivation email series
+3,12.976,73.54,1322512.268,18210.307,903.478,69.818,0.08,0.242,0.024,1062,1404508028.91,0.024,High-Value Loyalists,Premium loyalty program & early access to new products

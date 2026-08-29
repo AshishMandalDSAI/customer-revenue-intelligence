@@ -1,0 +1,5 @@
+profitability_quadrant,customers,total_revenue,total_profit,avg_margin
+High Revenue / High Profit,2127,1537938380.82,103947540.99,0.08
+High Revenue / Low Profit,1702,1136640451.27,-88182976.42,-0.09
+Low Revenue / High Profit,1702,136250314.69,13263691.83,0.11
+Low Revenue / Low Profit,2127,143373173.44,-21705787.36,-0.17

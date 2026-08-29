@@ -1,0 +1,16 @@
+{
+  "selected_model": "Random Forest",
+  "confusion_matrix": [
+    [
+      727,
+      195
+    ],
+    [
+      113,
+      493
+    ]
+  ],
+  "test_set_size": 1528,
+  "churn_rate_test_set": 0.39659685863874344,
+  "rationale": "Selected for highest weighted recall + PR-AUC, not accuracy. In churn prediction, missing a true churner (false negative) forfeits that customer's remaining lifetime value, while a false positive only costs an unnecessary retention offer. PR-AUC is used alongside recall because ROC-AUC can look optimistic under class imbalance."
+}

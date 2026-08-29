@@ -1,0 +1,4 @@
+segment_name,customers,avg_churn_prob,total_revenue_at_risk
+Mid-Value Occasional Shoppers,4884,0.4,63030399.11
+Low-Engagement / Dormant,1690,0.79,8825005.72
+High-Value Loyalists,1062,0.02,3504532.16

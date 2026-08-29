@@ -1,0 +1,18 @@
+{
+  "total_customers": 8000,
+  "active_customers": 4648,
+  "total_revenue": 2954202320.22,
+  "monthly_revenue_latest": 34839995.43,
+  "total_orders": 168250,
+  "average_order_value": 17558.41,
+  "repeat_purchase_rate": 0.9323,
+  "customer_retention_rate": 0.6032,
+  "churn_rate": 0.3968,
+  "average_clv_12m": 163194.88,
+  "total_predicted_clv_12m": 1246156085.75,
+  "total_revenue_at_risk": 75359937.0,
+  "high_risk_customers": 3019,
+  "average_customer_acquisition_cost": 299.53,
+  "estimated_total_profit": 7322468.64,
+  "return_rate": 0.0839
+}

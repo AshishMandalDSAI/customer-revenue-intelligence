@@ -1,0 +1,36 @@
+,mean_abs_shap
+orders_last_90d,0.9006
+tenure_days,0.5453
+orders_prior_90d,0.5198
+recency_days,0.4967
+frequency,0.2529
+engagement_score,0.187
+total_qty,0.1788
+monetary,0.1434
+avg_discount_pct,0.1098
+avg_order_value,0.1011
+std_order_value,0.0918
+age,0.0693
+n_categories,0.0635
+order_trend,0.0607
+total_refund,0.0573
+n_support_tickets,0.0552
+region_North,0.0474
+avg_satisfaction,0.0454
+gender_Male,0.0451
+acquisition_channel_Organic Search,0.0391
+return_rate,0.0377
+acquisition_cost,0.0331
+n_complaints,0.0244
+n_returns,0.0222
+complaint_trend,0.0171
+acquisition_channel_Email Marketing,0.0157
+acquisition_channel_Social Media,0.0132
+gender_Other,0.012
+complaints_prior_90d,0.0112
+region_South,0.0111
+acquisition_channel_Referral,0.0103
+complaints_last_90d,0.0101
+region_West,0.0089
+region_East,0.0076
+acquisition_channel_Paid Ads,0.0018

@@ -1,0 +1,121 @@
+product_id,product_name,category,unit_price,unit_cost
+P0001,Fashion Purpose 795,Fashion & Apparel,2801.61,1610.8
+P0002,Fashion Brother 726,Fashion & Apparel,836.81,652.89
+P0003,Furniture Ago 784,Furniture,47591.73,31014.58
+P0004,Automotive Site 504,Automotive Accessories,3123.68,1787.43
+P0005,Health Face 678,Health & Wellness,3317.63,2001.36
+P0006,Sports Election 304,Sports & Fitness,5124.89,3822.6
+P0007,Automotive Dog 844,Automotive Accessories,5145.4,3439.63
+P0008,Furniture Chair 418,Furniture,58300.49,38796.23
+P0009,Furniture Since 799,Furniture,13289.05,7930.49
+P0010,Sports Blue 139,Sports & Fitness,1642.32,996.75
+P0011,Pet Require 769,Pet Supplies,2907.4,2038.74
+P0012,Automotive Sit 433,Automotive Accessories,3889.06,2088.82
+P0013,Sports Wait 216,Sports & Fitness,4438.63,3251.07
+P0014,Books Offer 702,Books & Stationery,930.59,554.34
+P0015,Health Begin 848,Health & Wellness,3248.34,2073.52
+P0016,Automotive Performance 359,Automotive Accessories,5539.34,3476.71
+P0017,Health Knowledge 279,Health & Wellness,178.34,110.76
+P0018,Health Almost 697,Health & Wellness,2864.89,1953.76
+P0019,Books All 512,Books & Stationery,1180.61,799.88
+P0020,Home Better 202,Home & Kitchen,8153.47,4510.27
+P0021,Automotive Discover 608,Automotive Accessories,6178.74,3915.62
+P0022,Books Early 597,Books & Stationery,1162.49,663.39
+P0023,Toys Mouth 127,Toys & Baby,2296.24,1295.54
+P0024,Beauty Play 467,Beauty & Personal Care,3008.9,2296.78
+P0025,Health Agreement 152,Health & Wellness,1233.33,784.1
+P0026,Sports Option 695,Sports & Fitness,5146.18,3263.43
+P0027,Pet Decide 697,Pet Supplies,1308.2,790.57
+P0028,Beauty Sense 250,Beauty & Personal Care,226.09,155.59
+P0029,Health Rate 749,Health & Wellness,1928.23,1343.86
+P0030,Automotive Science 550,Automotive Accessories,1430.42,865.9
+P0031,Sports Offer 501,Sports & Fitness,3614.88,2502.69
+P0032,Furniture Kind 666,Furniture,22985.13,18266.54
+P0033,Groceries Discussion 206,Groceries,2406.65,1468.11
+P0034,Sports List 729,Sports & Fitness,2613.07,1359.0
+P0035,Beauty Perform 800,Beauty & Personal Care,2551.58,1896.75
+P0036,Furniture Fall 344,Furniture,7590.68,5191.29
+P0037,Fashion Table 509,Fashion & Apparel,1453.47,881.61
+P0038,Health True 620,Health & Wellness,830.58,659.98
+P0039,Electronics According 781,Electronics,32796.64,20554.72
+P0040,Beauty Song 663,Beauty & Personal Care,2106.73,1419.8
+P0041,Toys Sure 175,Toys & Baby,2195.88,1379.01
+P0042,Home Collection 544,Home & Kitchen,4226.39,2596.33
+P0043,Furniture Save 192,Furniture,36083.39,25762.64
+P0044,Beauty Knowledge 931,Beauty & Personal Care,2096.55,1651.39
+P0045,Toys Grow 631,Toys & Baby,309.46,246.66
+P0046,Sports Fall 533,Sports & Fitness,7109.8,4025.48
+P0047,Beauty Clearly 537,Beauty & Personal Care,1793.87,1091.68
+P0048,Fashion Dinner 613,Fashion & Apparel,2998.89,1868.99
+P0049,Pet Source 398,Pet Supplies,1633.92,1162.06
+P0050,Beauty Great 119,Beauty & Personal Care,2918.08,1850.92
+P0051,Books Blue 226,Books & Stationery,1152.67,942.27
+P0052,Toys Best 704,Toys & Baby,1549.92,963.94
+P0053,Furniture Husband 753,Furniture,46581.55,25700.25
+P0054,Toys Bill 923,Toys & Baby,1305.03,974.22
+P0055,Fashion Her 598,Fashion & Apparel,2414.26,1767.57
+P0056,Sports Throw 826,Sports & Fitness,3059.11,1703.44
+P0057,Toys Guy 361,Toys & Baby,2672.27,1747.87
+P0058,Pet Pm 941,Pet Supplies,619.13,430.6
+P0059,Beauty Everything 491,Beauty & Personal Care,3474.46,2198.43
+P0060,Fashion Surface 772,Fashion & Apparel,5377.52,3559.19
+P0061,Fashion Animal 566,Fashion & Apparel,2100.8,1319.43
+P0062,Groceries Show 694,Groceries,965.46,586.15
+P0063,Furniture Machine 771,Furniture,17222.71,13303.63
+P0064,Pet Not 316,Pet Supplies,499.86,238.75
+P0065,Automotive Capital 237,Automotive Accessories,1639.33,825.99
+P0066,Furniture Win 886,Furniture,13393.21,9903.91
+P0067,Pet Human 798,Pet Supplies,2919.71,1899.31
+P0068,Sports Bar 229,Sports & Fitness,421.25,214.52
+P0069,Beauty Old 218,Beauty & Personal Care,2420.16,2069.28
+P0070,Beauty Finally 555,Beauty & Personal Care,2475.78,1911.01
+P0071,Sports Themselves 279,Sports & Fitness,7295.88,4074.09
+P0072,Fashion Production 764,Fashion & Apparel,1047.03,731.26
+P0073,Pet Present 370,Pet Supplies,1542.46,919.6
+P0074,Beauty Value 959,Beauty & Personal Care,1109.59,798.45
+P0075,Sports Training 122,Sports & Fitness,5130.22,3244.06
+P0076,Automotive High 195,Automotive Accessories,1337.63,838.93
+P0077,Electronics Participant 968,Electronics,27427.85,20168.37
+P0078,Furniture Dark 823,Furniture,29108.13,20639.72
+P0079,Automotive Sea 116,Automotive Accessories,1095.87,792.21
+P0080,Beauty Available 816,Beauty & Personal Care,929.35,619.19
+P0081,Health Answer 644,Health & Wellness,3490.79,1497.19
+P0082,Beauty Recently 470,Beauty & Personal Care,1403.52,754.55
+P0083,Fashion Drive 686,Fashion & Apparel,5244.7,4178.48
+P0084,Books Spring 322,Books & Stationery,549.66,417.56
+P0085,Automotive Figure 834,Automotive Accessories,1065.91,817.72
+P0086,Sports Base 634,Sports & Fitness,1571.71,749.91
+P0087,Beauty Top 378,Beauty & Personal Care,631.97,361.66
+P0088,Toys Early 248,Toys & Baby,1566.66,1039.29
+P0089,Sports Trial 203,Sports & Fitness,483.99,327.49
+P0090,Home Blood 257,Home & Kitchen,1019.23,614.44
+P0091,Books Husband 711,Books & Stationery,847.9,521.31
+P0092,Pet Fall 553,Pet Supplies,2643.76,1909.21
+P0093,Books Long 139,Books & Stationery,444.85,163.97
+P0094,Home Prove 324,Home & Kitchen,7026.3,4295.99
+P0095,Beauty They 144,Beauty & Personal Care,1401.61,874.44
+P0096,Automotive His 191,Automotive Accessories,6709.3,4184.76
+P0097,Groceries Commercial 931,Groceries,292.83,163.18
+P0098,Health Hospital 911,Health & Wellness,3921.35,2733.78
+P0099,Books Hear 800,Books & Stationery,1320.72,897.06
+P0100,Furniture Determine 220,Furniture,33091.95,21004.91
+P0101,Pet Religious 870,Pet Supplies,1468.98,989.63
+P0102,Furniture Example 674,Furniture,17454.87,11994.84
+P0103,Sports Science 529,Sports & Fitness,3926.94,1874.19
+P0104,Groceries Write 430,Groceries,947.66,647.11
+P0105,Sports Result 441,Sports & Fitness,6265.97,4282.45
+P0106,Health Raise 953,Health & Wellness,3677.94,1753.53
+P0107,Health Away 395,Health & Wellness,2211.42,1051.77
+P0108,Sports Politics 686,Sports & Fitness,7298.21,4960.28
+P0109,Health Prove 668,Health & Wellness,1259.4,693.98
+P0110,Electronics Congress 281,Electronics,31723.72,21225.23
+P0111,Pet None 652,Pet Supplies,421.02,197.01
+P0112,Books Shoulder 175,Books & Stationery,1878.29,1233.46
+P0113,Pet Election 962,Pet Supplies,2432.52,1213.53
+P0114,Sports Common 803,Sports & Fitness,7217.5,5423.03
+P0115,Fashion Maintain 327,Fashion & Apparel,3663.43,2627.1
+P0116,Books Hundred 653,Books & Stationery,425.45,227.39
+P0117,Electronics Expect 614,Electronics,21770.35,13488.11
+P0118,Furniture Wish 786,Furniture,48356.19,23616.15
+P0119,Home Push 639,Home & Kitchen,11202.34,6619.57
+P0120,Health Rise 205,Health & Wellness,487.68,299.03
