@@ -7,7 +7,11 @@ dashboard, an AI Copilot, PostgreSQL schema, Power BI exports, and a pytest suit
 
 This README covers **installation, configuration, and running the project only**. For design
 details see [`docs/`](docs/) (linked at the bottom of this file).
+### 🚀 Live Demo
 
+👉 **[Open Customer 360 & Revenue Intelligence Platform](YOUR-STREAMLIT-URL-HERE)**
+
+> Explore the live Streamlit dashboard for customer churn prediction, CLV, revenue-at-risk, profitability analysis, and next-best-action recommendations.
 ## 1. Requirements
 
 - Python 3.11+ (developed/tested on 3.12)
