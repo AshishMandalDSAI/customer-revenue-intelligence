@@ -1,191 +1,161 @@
-# NovaMart Customer 360 & Revenue Intelligence Platform (CRIP)
+<div align="center">
 
-A customer analytics and revenue decision-support platform: churn prediction, customer
-lifetime value (CLV), revenue-at-risk, customer profitability, and next-best-action
-recommendations for a synthetic e-commerce dataset. Ships with a FastAPI backend, a Streamlit
-dashboard, an AI Copilot, PostgreSQL schema, Power BI exports, and a pytest suite.
+# 🚀 NovaMart Customer 360
 
-This README covers **installation, configuration, and running the project only**. For design
-details see [`docs/`](docs/) (linked at the bottom of this file).
-### 🚀 Live Demo
+### Customer Revenue Intelligence Platform (CRIP)
 
-👉 **[Open Customer 360 & Revenue Intelligence Platform](YOUR-STREAMLIT-URL-HERE)**
+**AI-Powered Customer Analytics • Churn Prediction • CLV • Revenue-at-Risk • Profitability • Next-Best-Action**
 
-> Explore the live Streamlit dashboard for customer churn prediction, CLV, revenue-at-risk, profitability analysis, and next-best-action recommendations.
-## 1. Requirements
+<p>
+  <a href="YOUR_STREAMLIT_URL_HERE">
+    <img src="https://img.shields.io/badge/🚀%20LIVE%20DEMO-OPEN%20DASHBOARD-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Live Demo"/>
+  </a>
+  <a href="https://github.com/AshishMandalDSAI/MarketPulse-AI">
+    <img src="https://img.shields.io/badge/GitHub-SOURCE%20CODE-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+  </a>
+</p>
 
-- Python 3.11+ (developed/tested on 3.12)
-- ~2 GB free disk
-- No external services required for default (flat-file) mode
-- Optional: Docker + Docker Compose, PostgreSQL, an OpenAI API key
+<p>
+  <img src="https://img.shields.io/badge/Python-3.11%2B-blue?style=flat-square&logo=python"/>
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=flat-square&logo=fastapi"/>
+  <img src="https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B?style=flat-square&logo=streamlit"/>
+  <img src="https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=flat-square&logo=scikit-learn"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-Database-4169E1?style=flat-square&logo=postgresql"/>
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?style=flat-square&logo=docker"/>
+  <img src="https://img.shields.io/badge/Power%20BI-Analytics-F2C811?style=flat-square&logo=powerbi"/>
+</p>
 
-## 2. Installation
+<p>
+  <b>Turn customer data into revenue decisions.</b>
+</p>
 
-```bash
-git clone <this-repo>
-cd customer-revenue-intelligence
+</div>
 
-python3 -m venv .venv && source .venv/bin/activate   # recommended
-pip install -r requirements.txt
-# or, without a venv: pip install -r requirements.txt --break-system-packages
-```
+---
 
-## 3. Environment configuration
+## 🌟 What is NovaMart Customer 360?
 
-```bash
-cp .env.example .env
-```
+**NovaMart Customer 360** is an end-to-end **Customer Revenue Intelligence Platform** designed to transform customer and transaction data into actionable business decisions.
 
-Edit `.env` only if you need to change defaults:
+The platform combines:
 
-| Variable | Default | Purpose |
-|---|---|---|
-| `APP_ENV` | `development` | App environment flag |
-| `DATABASE_URL` | `postgresql://novamart:novamart@localhost:5432/novamart` | Optional Postgres connection (not required to run API/dashboard) |
-| `POSTGRES_USER` / `POSTGRES_PASSWORD` / `POSTGRES_DB` | `novamart` | Used by `docker-compose.yml`'s `postgres` service |
-| `OPENAI_API_KEY` | (empty) | Optional — enables the AI Copilot's LLM path. Leave blank to use the built-in deterministic fallback (works with zero config) |
-| `COPILOT_MODEL` | `gpt-4o-mini` | Model name used if `OPENAI_API_KEY` is set |
-| `MODEL_PATH` | `models` | Where trained model artifacts are read/written |
-| `RANDOM_SEED` | `42` | Reproducibility seed for data generation and model training |
+- 🎯 Customer 360 analytics
+- 🔥 Churn prediction
+- 💰 Customer Lifetime Value (CLV)
+- ⚠️ Revenue-at-Risk analysis
+- 📊 Customer profitability
+- 🧩 RFM analysis & segmentation
+- 🤖 Next-Best-Action recommendations
+- 🧠 AI Analytics Copilot
+- 🚀 FastAPI REST backend
+- 📈 Interactive Streamlit dashboard
+- 📊 Power BI-ready datasets
+- 🐘 PostgreSQL database design
+- 🐳 Docker & Docker Compose
+- 🧪 Automated pytest validation
 
-No secrets are hardcoded anywhere in source; `.env` is git-ignored (see `.gitignore`).
+The project uses a **synthetic e-commerce dataset** created specifically for academic and portfolio demonstration.
 
-## 4. Run the pipeline
+> ⚠️ **Disclaimer:** NovaMart is a fictional company and the dataset is synthetic. The results are intended for academic/project demonstration and should not be interpreted as real business performance.
 
-```bash
-python scripts/run_pipeline.py
-```
+---
 
-Runs, in order: data generation → validation → cleaning → feature engineering → RFM →
-segmentation → churn model training → CLV model training → SHAP explainability →
-revenue-at-risk → profitability → next-best-action → executive KPIs → EDA charts → Power BI
-export. Takes ~45-60 seconds at the default scale (8,000 customers). Writes to
-`data/processed/`, `models/`, `reports/`, and `powerbi/powerbi_data/`.
+# 🚀 Live Demo
 
-```bash
-# Re-run without regenerating synthetic data (reuse data/synthetic/*.csv)
-python scripts/run_pipeline.py --skip-generate
-```
+<div align="center">
 
-Individual pipeline stages can be run standalone — see `Makefile` targets or run any module
-directly, e.g. `python -m src.models.churn_model`.
+### Try the platform directly in your browser
 
-To scale up the dataset (default is 8,000 customers / ~168K orders), edit `N_CUSTOMERS` and
-`AVG_ORDERS_PER_CUSTOMER` in `src/config.py`, then re-run the pipeline. Nothing downstream is
-hardcoded to the default size.
+<a href="YOUR_STREAMLIT_URL_HERE">
 
-## 5. Run the FastAPI backend
+<img src="https://img.shields.io/badge/🚀%20LAUNCH%20LIVE%20DEMO-NovaMart%20Customer%20360-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" width="360"/>
 
-```bash
-uvicorn api.main:app --reload --port 8000
-# or: make api
-```
+</a>
 
-- Health check: `GET http://localhost:8000/health`
-- Interactive docs: `http://localhost:8000/docs` (Swagger) or `/redoc`
-- Full endpoint reference: [`docs/api_documentation.md`](docs/api_documentation.md)
+<br><br>
 
-Requires the pipeline to have been run at least once (endpoints return `503` with a clear
-message otherwise, not a stack trace).
+**No installation required. Explore the interactive dashboard online.**
 
-## 6. Run the Streamlit dashboard
+</div>
 
-```bash
-streamlit run dashboard/app.py
-# or: make dashboard
-```
+---
 
-Opens at `http://localhost:8501`. Pages: Executive Overview, Customer 360 (search), Customer
-Segmentation, Churn Intelligence, Revenue & CLV, Recommendations & Next-Best-Action, AI
-Analytics Copilot.
+# 🎯 Business Problem
 
-## 7. Run tests
+Modern e-commerce businesses generate huge volumes of customer, order, payment, product, campaign, and interaction data.
 
-```bash
-pytest tests/ -v
-# or: make test
-```
+The challenge is not simply collecting this data.
 
-45 tests across `tests/test_data.py`, `test_features.py`, `test_models.py`,
-`test_business_logic.py`, `test_api.py`. Tests read real pipeline output on disk and will
-`pytest.skip()` (not fail) for any file that doesn't exist yet — run the pipeline first.
+The real challenge is answering:
 
-## 8. AI Copilot
+> **Which customers are at risk, which customers are valuable, how much revenue is at risk, and what should the business do next?**
 
-Works out of the box with **no configuration** — a deterministic, rule-based assistant grounded
-in the pipeline's own output (`ai_copilot/copilot.py`):
+NovaMart Customer 360 addresses these questions through an integrated analytics and machine-learning platform.
 
-```bash
-python ai_copilot/copilot.py
-```
+### Key business questions
 
-To enable the LLM-backed path instead, set `OPENAI_API_KEY` in `.env`. If the LLM call fails for
-any reason, the copilot transparently falls back to the deterministic assistant rather than
-erroring. Details: [`ai_copilot/README.md`](ai_copilot/README.md).
-
-## 9. Power BI exports
-
-Generated automatically by the pipeline into `powerbi/powerbi_data/`:
-
-```
-customer_360.csv   monthly_revenue.csv   customer_segments.csv   churn_predictions.csv
-clv_predictions.csv   revenue_at_risk.csv   profitability.csv   recommendations.csv
-```
-
-Import guide, relationships, DAX measures, and column dictionary:
-[`powerbi/README.md`](powerbi/README.md), [`powerbi/DAX_Measures.md`](powerbi/DAX_Measures.md),
-[`powerbi/data_dictionary.md`](powerbi/data_dictionary.md).
-
-## 10. Optional: PostgreSQL
-
-`database/schema.sql` (10 tables) and `database/views.sql` (6 analytical views) are provided.
-The API/dashboard run against flat CSV files by default and do **not** require Postgres.
-
-```bash
-psql -U <user> -d <db> -f database/schema.sql
-psql -U <user> -d <db> -f database/views.sql
-# Load pipeline output (run the pipeline first):
-psql -U <user> -d <db> -f database/seed.sql
-```
-
-## 11. Optional: Docker Compose
-
-```bash
-cp .env.example .env
-docker compose run --rm pipeline      # generate data + train models once
-docker compose up --build             # start postgres, api (:8000), app (:8501)
-```
-
-Services are defined in `docker-compose.yml` (`postgres`, `pipeline`, `api`, `app`).
-
-## 12. Makefile shortcuts
-
-```bash
-make setup          # pip install
-make pipeline       # full pipeline
-make pipeline-fast  # pipeline, skip data generation
-make train          # retrain churn + CLV models only
-make test            # pytest
-make api             # start FastAPI
-make dashboard        # start Streamlit
-make docker-build / docker-up / docker-down
-make clean           # remove generated data/models/reports (not source code)
-```
-
-## Troubleshooting
-
-| Symptom | Fix |
+| Business Question | Platform Solution |
 |---|---|
-| API/dashboard error about a missing `data/processed/*.csv` or `models/*.pkl` | Run `python scripts/run_pipeline.py` first |
-| `pip install` fails on `psycopg2-binary` | Install `libpq-dev` (Debian/Ubuntu) or drop it from `requirements.txt` if you don't need Postgres |
-| `pytest` shows many `SKIPPED` | Pipeline hasn't been run yet |
-| Streamlit shows "No processed data found" | Same as above |
+| Which customers may churn? | Churn Prediction |
+| Which customers are most valuable? | CLV Prediction |
+| How much revenue is at risk? | Revenue-at-Risk |
+| Which customers are profitable? | Profitability Analytics |
+| How are customers segmented? | RFM + Segmentation |
+| What action should we take? | Next-Best-Action |
+| Can management explore insights interactively? | Streamlit Dashboard |
+| Can analysts consume predictions programmatically? | FastAPI |
+| Can executives use BI tools? | Power BI Exports |
+| Can decision-makers ask questions? | AI Copilot |
 
-## Further documentation
+---
 
-- [`docs/architecture.md`](docs/architecture.md) — system diagram, module responsibilities
-- [`docs/database_design.md`](docs/database_design.md) — ER diagram, table/view reference
-- [`docs/ml_methodology.md`](docs/ml_methodology.md) — model methodology and real metrics
-- [`docs/api_documentation.md`](docs/api_documentation.md) — full REST API reference
-- [`docs/installation.md`](docs/installation.md) — extended setup notes and troubleshooting
-- [`reports/test_results.md`](reports/test_results.md) / [`reports/dashboard_test_results.md`](reports/dashboard_test_results.md) — verification results
+# 🧠 Platform Architecture
+
+```text
+                    ┌─────────────────────────────┐
+                    │     Synthetic E-Commerce    │
+                    │          Dataset             │
+                    └──────────────┬──────────────┘
+                                   │
+                                   ▼
+                    ┌─────────────────────────────┐
+                    │   Data Validation & Cleaning │
+                    │ Feature Engineering + RFM    │
+                    └──────────────┬──────────────┘
+                                   │
+                    ┌──────────────┴──────────────┐
+                    │                             │
+                    ▼                             ▼
+          ┌──────────────────┐          ┌──────────────────┐
+          │   ML Analytics   │          │ Business Analytics│
+          ├──────────────────┤          ├──────────────────┤
+          │ Churn Prediction │          │ Segmentation     │
+          │ CLV Prediction   │          │ Profitability     │
+          │ Explainability   │          │ Revenue-at-Risk  │
+          └────────┬─────────┘          └────────┬─────────┘
+                   │                             │
+                   └──────────────┬──────────────┘
+                                  │
+                                  ▼
+                    ┌─────────────────────────────┐
+                    │   Next-Best-Action Engine   │
+                    └──────────────┬──────────────┘
+                                   │
+                    ┌──────────────┴──────────────┐
+                    ▼                             ▼
+          ┌──────────────────┐          ┌──────────────────┐
+          │ Streamlit        │          │ FastAPI          │
+          │ Executive        │          │ REST API         │
+          │ Dashboard        │          │                  │
+          └────────┬─────────┘          └────────┬─────────┘
+                   │                             │
+                   ▼                             ▼
+          ┌──────────────────┐          ┌──────────────────┐
+          │ AI Analytics     │          │ External Apps /  │
+          │ Copilot          │          │ Integrations     │
+          └──────────────────┘          └──────────────────┘
+
+                         ┌──────────────────────┐
+                         │      Power BI        │
+                         │ Executive Analytics  │
+                         └──────────────────────┘
